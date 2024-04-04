@@ -55,10 +55,9 @@ clean:
 	rm -f isolate.1 isolate.1.html
 	rm -f docbook-xsl.css
 
-install: isolate isolate-check-environment isolate-cg-keeper
+install: isolate isolate-check-environment
 	install -d $(BINDIR) $(SBINDIR) $(BOXDIR) $(CONFIGDIR)
 	install isolate-check-environment $(BINDIR)
-	install isolate-cg-keeper $(SBINDIR)
 	install -m 4755 isolate $(BINDIR)
 	install -m 644 default.cf $(CONFIG)
 
